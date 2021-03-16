@@ -60,6 +60,7 @@ int main() {
         cin.ignore();
         a.setX(x);
         a.setY(y);
+
         second.addPoint(i, a);
     }
 

@@ -15,6 +15,7 @@ class PlanarPolygon {
 
 public:
 
+    PlanarPolygon();
     PlanarPolygon(int nop);//defalt constructor
     PlanarPolygon(const PlanarPolygon &obj);// copy constructor
     ~PlanarPolygon();//destructor
@@ -24,8 +25,6 @@ public:
     void addPoint(int index, Point pnt);
 
     float PerimiterCalc();
-
-    void setAmountOfPoints(int amount);
 
     bool compare(PlanarPolygon poly2);
 

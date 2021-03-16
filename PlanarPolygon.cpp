@@ -8,15 +8,24 @@
 using namespace std;
 PlanarPolygon::PlanarPolygon(int nop){ //  ctor
 
+
     arrayOfPoints=new Point[nop];
     cout << "in constructor" << endl;
+    numOfPoints=nop;
 }
 
 
 
 
 void PlanarPolygon::addPoint(int index, Point pnt) {
-    arrayOfPoints[index]=pnt;
+
+    int x,y;
+    x=pnt.getX();
+    y=pnt.getY();
+
+    arrayOfPoints[index].setX(x);
+    arrayOfPoints[index].setY(y);
+
 }
 
 float PlanarPolygon::PerimiterCalc() {
@@ -55,10 +64,6 @@ if (numOfPoints!=0)
 
 }
 
-void PlanarPolygon::setAmountOfPoints(int amount) {
-    numOfPoints=amount;
-}
-
 
 bool PlanarPolygon ::compare(PlanarPolygon poly2) {
 
@@ -83,6 +88,10 @@ bool PlanarPolygon ::compare(PlanarPolygon poly2) {
 
     }
 
+
+}
+
+PlanarPolygon::PlanarPolygon() {
 
 }
 
